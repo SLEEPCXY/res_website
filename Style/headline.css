@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 80px; /* 设置导航栏高度为80px */
+    display: flex;
+    justify-content: space-between; /* 左右两侧对齐 */
+    align-items: center; /* 垂直居中 */
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header a {
+    text-decoration: none; /* 取消下划线 */
+    font-size: 20px; /* 放大字体 */
+    padding: 10px; /* 添加填充 */
+}
+
+.header a:hover {
+    cursor: pointer; /* hover时变为手型指针 */
+    border: 1px solid black; /* 用方框框住 */
+    padding: 9px; /* 稍微缩小一点，以保证大小不变 */
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li a {
+    font-family: Arial, sans-serif;
+    /* 其他样式属性 */
+}
+
+.header li {
+    margin-right: 20px;
+}
+
+.header .welcome a {
+    font-family: Arial, sans-serif;
+    font-size: 24px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体加粗 */
+    color: black;
+}
+
+
+.content {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    padding: 20px;  
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+

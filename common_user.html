@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>user operation</title>
+    <title>User Operation</title>
+    <link rel = "stylesheet" type = "text/css" href="Style/headline.css">
 </head>
 <body>
-    <h1>user operation</h1>
-    <ul>
-        <li><a href="users_pernal.php">Modify personal information</a></li>
+    <div class="header">
+        <p class="welcome"><a href="common_user.html">Welcome</a></p>
+        <ul>
+            <li><a href="users_pernal.php">Modify personal information</a></li>
+            <li><a href="users_do_order.php">Place an order</a></li>
+            <li><a href="users_history_orders.php">View historical orders</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <h1>Today Menu</h1>
         
-        <li><a href="users_do_order.php">place an order</a></li>
-        
-        <li><a href="users_history_orders.php">View historical orders</a></li>
-    </ul>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="image\Food.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1</p>
+            </div>
+            
+            <div class="grid-item">
+                <img src="image\Food.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+            </div>
+            
+            <div class="grid-item">
+                <img src="image\Food.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Description of Product 3</p>
+            </div>
+            
+            <!-- 添加更多产品项 -->
+        </div>
+    </div>
 </body>
 </html>

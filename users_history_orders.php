@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Orders</title>
+    <link rel="stylesheet" type="text/css" href="Style/headline.css">
+    
     <style>
         table {
             border-collapse: collapse;
@@ -22,6 +24,16 @@
     </style>
 </head>
 <body>
+
+    <div class="header">
+        <p class="welcome"><a href="common_user.html">Welcome</a></p>
+        <ul>
+            <li><a href="users_pernal.php">Modify personal information</a></li>
+            <li><a href="users_do_order.php">Place an order</a></li>
+            <li><a href="users_history_orders.php">View historical orders</a></li>
+        </ul>
+    </div>
+
     <h2>Orders</h2>
     <table>
         <tr>
