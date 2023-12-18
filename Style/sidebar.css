@@ -1,0 +1,55 @@
+#sidebar {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* 将#sidebar的高度设置为100vh */
+
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    width: 100%;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    margin-bottom: 10px;
+}
+
+#sidebar li:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#sidebar a {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid transparent;
+    word-wrap: break-word;
+    display: block;
+}
+#sidebar a:hover {
+    border-color: #fff;
+}
