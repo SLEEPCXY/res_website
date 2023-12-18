@@ -70,7 +70,7 @@
     <!-- 添加表单 -->
     <h3>Add Inventory</h3>
     <form method="post" action="./inventory/add.php">
-        User ID: <input type="text" name="UserID"><br>
+        <!-- User ID: <input type="text" name="UserID"><br> -->
         Dish ID: <input type="text" name="DishID"><br>
         Current Stock: <input type="text" name="CurrentStock"><br>
         Purchase Price: <input type="text" name="PurchasePrice"><br>
