@@ -9,7 +9,8 @@ if ($conn->connect_error) {
 
 // 从 POST 请求中获取相关变量
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $UserID = $_POST['UserID'];
+    //$UserID = $_POST['UserID'];
+    $UserID = rand();
     $DishID = $_POST['DishID'];
     $CurrentStock = $_POST['CurrentStock'];
     $PurchasePrice = $_POST['PurchasePrice'];

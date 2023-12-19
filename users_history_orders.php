@@ -71,6 +71,7 @@
             echo "<td>{$row['Quantity']}</td>";
             echo "<td>{$row['UnitPrice']}</td>";
             echo "<td>{$row['TotalAmount']}</td>";
+            echo "<td><a href='./users/delete_order.php?orderID={$row['OrderID']}'>Delete</a></td>";
             echo "<td>";
             if ($row['OrderStatus'] == 0) {
                 echo "未出货";
