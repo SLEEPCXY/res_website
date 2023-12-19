@@ -8,8 +8,8 @@ if ($conn->connect_error) {
 }
 
 // 从 POST 请求中获取 delete_id
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $delete_id = $_POST['OrderID'];
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $OrderID = $_GET['id'];
 
     // 构建 SQL 删除语句
     $sql = "DELETE FROM orders WHERE OrderID='$OrderID'";

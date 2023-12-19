@@ -37,7 +37,7 @@
     if ($result->num_rows > 0) {
         echo "<table><tr><th>SupplierID</th><th>Brand</th><th>SupplierName</th><th>Contact</th><th>ContactPhoneNumber</th><th>Address</th><th>操作</th></tr>";
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["SupplierID"]."</td><td>".$row["Brand"]."</td><td>".$row["SupplierName"]."</td><td>".$row["Contact"]."</td><td>".$row["ContactPhoneNumber"]."</td><td>".$row["Address"]."</td><td><form method='post' action='delete_supplier.php'><input type='hidden' name='delete_id' value='".$row["SupplierID"]."'><input type='submit' value='删除'></form></td></tr>";
+            echo "<tr><td>".$row["SupplierID"]."</td><td>".$row["Brand"]."</td><td>".$row["SupplierName"]."</td><td>".$row["Contact"]."</td><td>".$row["ContactPhoneNumber"]."</td><td>".$row["Address"]."</td><td><form method='post' action='./suppliers/delete_supplier.php'><input type='hidden' name='delete_id' value='".$row["SupplierID"]."'><input type='submit' value='删除'></form></td></tr>";
         }
         echo "</table>";
     } else {

@@ -80,7 +80,7 @@
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
-
+            <a href="register.php">注册</a>
             <input type="submit" value="Login">
         </form>
     </div>

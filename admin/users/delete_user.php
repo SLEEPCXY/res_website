@@ -1,7 +1,7 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // 获取传递过来的用户名
-    $usernameToDelete = $_POST['UserName'];
+    $usernameToDelete = $_GET['UserName'];
 
     // 连接数据库
     include '../../database_config.php';
