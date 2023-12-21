@@ -3,6 +3,7 @@
 <head>
     <title>Manage Order</title>
     <link rel = "stylesheet" type = "text/css" href="../Style/sidebar.css">
+    <link rel = "stylesheet" type = "text/css" href="../Style/ACT.css">
     <style>
         body {
             display: flex;
@@ -10,28 +11,6 @@
             height: 100vh; /* 将body的高度设置为100vh */
             background-color: #f2f2f2;
         }
-
-        #content {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column; /* 添加此行 */
-            justify-content: center;
-            align-items: center;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-
-        img {
-            border: 2px solid black;
-        }
-
     </style>
 </head>
 <body>
@@ -50,79 +29,87 @@
 
     
     <div id="content">
-        <?php
-        // 数据库连接
-        include '../database_config.php';
+        <div id = "Add">
+            <form action="add_order.php" method="post">
+                <h3>添加订单：</h3>
+                OrderID: <input type="text" name="OrderID"><br>
+                UserUserIDName: <input type="text" name="UserID"><br>
+                OrderDate: <input type="text" name="OrderDate"><br>
+                DishName: <input type="text" name="DishName"><br>
+                Quantity: <input type="text" name="Quantity"><br>
+                UnitPrice: <input type="text" name="UnitPrice"><br>
+                TotalAmount: <input type="text" name="TotalAmount"><br>
+                OrderStatus: <input type="text" name="OrderStatus"><br>
+                <input type="submit" value="添加">
+            </form>
+        </div>
+        
+        <br>
 
-        // 检查连接是否成功
-        if ($conn->connect_error) {
-            die("连接失败: " . $conn->connect_error);
-        }
+        <div id = "Change">
+            <form action="update_order.php" method="post">
+                <h3>修改订单：</h3>
+                OrderID: <input type="text" name="OrderID"><br>
+                UserID: <input type="text" name="UserID"><br>
+                OrderDate: <input type="text" name="OrderDate"><br>
+                DishName: <input type="text" name="DishName"><br>
+                Quantity: <input type="text" name="Quantity"><br>
+                UnitPrice: <input type="text" name="UnitPrice"><br>
+                TotalAmount: <input type="text" name="TotalAmount"><br>
+                OrderStatus: <input type="text" name="OrderStatus"><br>
+                <input type="submit" value="修改">
+            </form>
+        </div>
 
-        // 查询orders表中的数据
-        $sql = "SELECT OrderID, UserID, OrderDate, DishName, Quantity, UnitPrice, TotalAmount, OrderStatus FROM orders";
-        $result = $conn->query($sql);
+        <br>
 
-        if ($result->num_rows > 0) {
-            echo "<table border='1'>
-            <tr>
-            <th>OrderID</th>
-            <th>UserID</th>
-            <th>OrderDate</th>
-            <th>DishName</th>
-            <th>Quantity</th>
-            <th>UnitPrice</th>
-            <th>TotalAmount</th>
-            <th>OrderStatus</th>
-            <th>Action</th>
-            </tr>";
+        <div id = "Table">
+            <?php
+            // 数据库连接
+            include '../database_config.php';
 
-            // 输出数据
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                <td>".$row["OrderID"]."</td>
-                <td>".$row["UserNaUserIDme"]."</td>
-                <td>".$row["OrderDate"]."</td>
-                <td>".$row["DishName"]."</td>
-                <td>".$row["Quantity"]."</td>
-                <td>".$row["UnitPrice"]."</td>
-                <td>".$row["TotalAmount"]."</td>
-                <td>".$row["OrderStatus"]."</td>
-                <td><a href='./orders/delete_order.php?id=".$row["OrderID"]."'>删除</a></td>
-                </tr>";
+            // 检查连接是否成功
+            if ($conn->connect_error) {
+                die("连接失败: " . $conn->connect_error);
             }
-            echo "</table>";
-        } else {
-            echo "0 结果";
-        }
 
-        ?>
+            // 查询orders表中的数据
+            $sql = "SELECT OrderID, UserID, OrderDate, DishName, Quantity, UnitPrice, TotalAmount, OrderStatus FROM orders";
+            $result = $conn->query($sql);
 
-        <form action="add_order.php" method="post">
-            <h3>添加订单：</h3>
-            OrderID: <input type="text" name="OrderID"><br>
-            UserUserIDName: <input type="text" name="UserID"><br>
-            OrderDate: <input type="text" name="OrderDate"><br>
-            DishName: <input type="text" name="DishName"><br>
-            Quantity: <input type="text" name="Quantity"><br>
-            UnitPrice: <input type="text" name="UnitPrice"><br>
-            TotalAmount: <input type="text" name="TotalAmount"><br>
-            OrderStatus: <input type="text" name="OrderStatus"><br>
-            <input type="submit" value="添加">
-        </form>
+            if ($result->num_rows > 0) {
+                echo "<table border='1'>
+                <tr>
+                <th>OrderID</th>
+                <th>UserID</th>
+                <th>OrderDate</th>
+                <th>DishName</th>
+                <th>Quantity</th>
+                <th>UnitPrice</th>
+                <th>TotalAmount</th>
+                <th>OrderStatus</th>
+                <th>Action</th>
+                </tr>";
 
-        <form action="update_order.php" method="post">
-            <h3>修改订单：</h3>
-            OrderID: <input type="text" name="OrderID"><br>
-            UserID: <input type="text" name="UserID"><br>
-            OrderDate: <input type="text" name="OrderDate"><br>
-            DishName: <input type="text" name="DishName"><br>
-            Quantity: <input type="text" name="Quantity"><br>
-            UnitPrice: <input type="text" name="UnitPrice"><br>
-            TotalAmount: <input type="text" name="TotalAmount"><br>
-            OrderStatus: <input type="text" name="OrderStatus"><br>
-            <input type="submit" value="修改">
-        </form>
+                // 输出数据
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                    <td>".$row["OrderID"]."</td>
+                    <td>".$row["UserNaUserIDme"]."</td>
+                    <td>".$row["OrderDate"]."</td>
+                    <td>".$row["DishName"]."</td>
+                    <td>".$row["Quantity"]."</td>
+                    <td>".$row["UnitPrice"]."</td>
+                    <td>".$row["TotalAmount"]."</td>
+                    <td>".$row["OrderStatus"]."</td>
+                    <td><a href='./orders/delete_order.php?id=".$row["OrderID"]."'>删除</a></td>
+                    </tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "0 结果";
+            }
+            ?>
     </div>
     
 </body>

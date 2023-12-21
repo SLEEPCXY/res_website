@@ -1,0 +1,10 @@
+Inventory:
+    1.插入属性对不上 UserID和InventoryId
+    2.查询显示0结果
+    
+
+Suppliers:
+    1.插入属性对不上 Contact和ContactPerson
+    2.查询时单条记录跳出一个表格，一个表格有两条相同的信息
+
+    

@@ -10,15 +10,15 @@ if ($conn->connect_error) {
 // 从 POST 请求中获取相关变量
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$UserID = $_POST['UserID'];
-    $UserID = rand();
+    $InventoryID = rand();
     $DishID = $_POST['DishID'];
     $CurrentStock = $_POST['CurrentStock'];
     $PurchasePrice = $_POST['PurchasePrice'];
     $SellingPrice = $_POST['SellingPrice'];
 
     // 构建 SQL 插入语句
-    $sql = "INSERT INTO dishinventory (UserID, DishID, CurrentStock, PurchasePrice, SellingPrice)
-    VALUES ('$UserID', '$DishID', '$CurrentStock', '$PurchasePrice', '$SellingPrice');";
+    $sql = "INSERT INTO dishinventory (InventoryID, DishID, CurrentStock, PurchasePrice, SellingPrice)
+    VALUES ('$InventoryID', '$DishID', '$CurrentStock', '$PurchasePrice', '$SellingPrice');";
 
     // 执行插入操作
     if ($conn->query($sql) === TRUE) {

@@ -1,0 +1,57 @@
+#content {
+    display: flex;
+    max-width: 2000px;
+    flex-wrap: wrap;
+    flex-direction:row;
+}
+
+#Add, #Change, #Table {
+    padding: 20px;
+}
+
+#Add{
+    width: 40%;
+}
+
+#Change{
+    width: 40%;
+}
+
+#Table {
+    width: 100%;
+}
+
+Table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

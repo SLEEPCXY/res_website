@@ -6,7 +6,7 @@ include '../database_config.php';
         die("连接失败: " . $conn->connect_error);
     }
 
-$delete_id = $_POST['Order_ID']
+$delete_id = $_GET['OrderID'];
 
 $sql = "DELETE FROM orders where OrderID = '$delete_id' and OrderStatus = 0;";
 

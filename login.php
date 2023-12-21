@@ -8,7 +8,6 @@
             background-image: url("Image/Login_Background.jpg");
             background-size: cover;
             background-position: center center;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,21 +18,20 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px 50px 40px 40px;
-            background-color: rgba(255, 255, 255, 0.7); /* 修改透明度，原始值为 #fff */
+            background-color: rgba(255, 255, 255, 0.7);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(10px); /* 添加玻璃模糊效果 */
+            backdrop-filter: blur(10px);
         }
-
-
 
         h2 {
             text-align: center;
             color: #333;
+            font-size: 24px;
         }
 
         label {
@@ -49,20 +47,37 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
 
-        input[type="submit"] {
-            width: 100%;
+        .buttons-container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            margin-top: 10px;
+        }
+
+        .button {
+            margin: 0 5px;
             padding: 10px;
             background-color: #4CAF50;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; /* 移除下划线 */
         }
 
-        input[type="submit"]:hover {
+        .button:hover {
             background-color: #45a049;
+        }
+
+        .login-button {
+            background-color: #008CBA;
+        }
+
+        .login-button:hover {
+            background-color: #0077a3;
         }
 
         .error-message {
@@ -70,6 +85,8 @@
             text-align: center;
         }
     </style>
+
+
 </head>
 <body>
     <div class="container">
@@ -80,8 +97,12 @@
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
-            <a href="register.php">注册</a>
-            <input type="submit" value="Login">
+
+            <div class="buttons-container">
+                <a href="register.php" class="button">Register</a>
+                <input type="submit" value="Login" class="button login-button">
+            </div>
+
         </form>
     </div>
 
