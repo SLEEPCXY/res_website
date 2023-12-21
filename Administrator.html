@@ -2,16 +2,58 @@
 <html>
 <head>
     <title>Management page</title>
+    <link rel = "stylesheet" type = "text/css" href="Style/sidebar.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh; /* 将body的高度设置为100vh */
+            background-color: #f2f2f2;
+        }
+
+        #content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* 添加此行 */
+            justify-content: center;
+            align-items: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            border: 2px solid black;
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Management page</h2>
-    <ul>
-        <li><a href="./admin/m_users.php">manage users</a></li>
-        <li><a href="./admin/m_orders.php">manage orders</a></li>
-        <li><a href="./admin/m_dishes.php">manage dishes</a></li>
-        <li><a href="./admin/m_inventory.php">manage inventory</a></li>
-        <li><a href="./admin/m_suppliers.php">manage suppliers</a></li>
-        <li><a href="./admin/m_admin.php">manage personal_message</a></li>
-    </ul>
+    <div id="sidebar">
+        <h2><a href="Administrator.html" style="color: #fff; text-decoration: none;">Management page</a></h2>
+        <hr>
+        <ul>
+            <li><a href="./admin/m_users.php">Manage Users</a></li>
+            <li><a href="./admin/m_orders.php">Manage Orders</a></li>
+            <li><a href="./admin/m_dishes.php">Manage Dishes</a></li>
+            <li><a href="./admin/m_inventory.php">Manage Inventory</a></li>
+            <li><a href="./admin/m_suppliers.php">Manage Suppliers</a></li>
+            <li><a href="./admin/m_admin.php">Manage Personal Messages</a></li>
+        </ul>
+    </div>
+
+    
+    <div id="content">
+        <h2>Welcome, Administrator!</h2>
+        <img src="./Image/Food1.jpg" alt="Food1" style="max-width: 100%; max-height: 300px;">
+        <h1>Select Features on Left Side</h1>
+    </div>
+    
 </body>
 </html>
