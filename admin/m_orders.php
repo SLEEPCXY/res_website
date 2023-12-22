@@ -30,8 +30,8 @@
     
     <div id="content">
         <div id = "Add">
-            <form action="add_order.php" method="post">
-                <h3>添加订单：</h3>
+            <form action="./orders/add_order.php" method="post">
+                <h3>添加订单123：</h3>
                 OrderID: <input type="text" name="OrderID"><br>
                 UserUserIDName: <input type="text" name="UserID"><br>
                 OrderDate: <input type="text" name="OrderDate"><br>
@@ -47,7 +47,7 @@
         <br>
 
         <div id = "Change">
-            <form action="update_order.php" method="post">
+            <form action="./orders/update_order.php" method="post">
                 <h3>修改订单：</h3>
                 OrderID: <input type="text" name="OrderID"><br>
                 UserID: <input type="text" name="UserID"><br>
@@ -95,7 +95,7 @@
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>
                     <td>".$row["OrderID"]."</td>
-                    <td>".$row["UserNaUserIDme"]."</td>
+                    <td>".$row["UserID"]."</td>
                     <td>".$row["OrderDate"]."</td>
                     <td>".$row["DishName"]."</td>
                     <td>".$row["Quantity"]."</td>

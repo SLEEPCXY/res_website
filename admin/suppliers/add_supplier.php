@@ -16,7 +16,7 @@ $ContactPhoneNumber = $_POST['ContactPhoneNumber'];
 $Address = $_POST['Address'];
 
 // 添加记录的 SQL 语句
-$sql = "INSERT INTO suppliers (SupplierID, Brand, SupplierName, Contact, ContactPhoneNumber, PAddress) 
+$sql = "INSERT INTO suppliers (SupplierID, Brand, SupplierName, ContactPerson, ContactPhoneNumber, PAddress) 
 VALUES ('$SupplierID', '$Brand', '$SupplierName', '$Contact', '$ContactPhoneNumber', '$Address')";
 
 // 执行 SQL
