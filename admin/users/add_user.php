@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 获取表单提交的数据
     $userName = $_POST['UserName'];
-    $password = $_POST['Password'];
+    $passw = $_POST['Password'];
     $address = $_POST['Address'];
     $phoneNumber = $_POST['PhoneNumber'];
 
@@ -15,8 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // 构建 SQL 查询语句并执行
-    $sql = "INSERT INTO users (UserName, Password, Address, PhoneNumber) VALUES ('$userName', '$password', '$address', '$phoneNumber')";
-
+    $sql = "INSERT INTO users (UserName, Password, Address, PhoneNumber) VALUES ('$userName', '$passw', '$address', '$phoneNumber')";
     if ($conn->query($sql) === TRUE) {
         echo "记录添加成功";
         header("Location:../m_users.php");
