@@ -1,3 +1,4 @@
+12.25
 Inventory:
     1.插入属性对不上 UserID和InventoryId
     2.查询显示0结果
@@ -7,4 +8,11 @@ Suppliers:
     1.插入属性对不上 Contact和ContactPerson
     2.查询时单条记录跳出一个表格，一个表格有两条相同的信息
 
-    
+12.26
+管理员：
+    添加user时密码强制为root
+    插入库存sql语句报错
+        Error: INSERT INTO dishinventory (UserID, DishID, CurrentStock, PurchasePrice, SellingPrice) VALUES ('886715699', '1', '2', '3', '4');
+        Unknown column 'UserID' in 'field list'
+    删除供应商代码路径错误--已更正
+        $row["PAddress"]."</td><td><form method='post' action='./suppliers/delete_supplier.php'><input type='hidden' name='delete_id' value='"

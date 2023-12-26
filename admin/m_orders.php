@@ -31,7 +31,7 @@
     <div id="content">
         <div id = "Add">
             <form action="./orders/add_order.php" method="post">
-                <h3>添加订单123：</h3>
+                <h3>添加订单：</h3>
                 OrderID: <input type="text" name="OrderID"><br>
                 UserUserIDName: <input type="text" name="UserID"><br>
                 OrderDate: <input type="text" name="OrderDate"><br>

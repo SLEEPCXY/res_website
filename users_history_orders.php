@@ -44,6 +44,7 @@
             <th>Quantity</th>
             <th>UnitPrice</th>
             <th>TotalAmount</th>
+            <th>Delete</th>
             <th>OrderStatus</th>
         </tr>
 

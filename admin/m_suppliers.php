@@ -30,7 +30,7 @@
         
         <div id="content" class="clearfix">
         <div id = 'Add'>
-            <h2>添加</h2>
+            <h2>添加供应</h2>
             <form method="post" action="./suppliers/add_supplier.php">
                 SupplierID: <input type="text" name="SupplierID"><br>
                 Brand: <input type="text" name="Brand"><br>
@@ -45,7 +45,7 @@
             <br>
 
         <div id = 'Change'>
-            <h2>修改</h2>
+            <h2>修改供应</h2>
             <form method="post" action="./suppliers/update_supplier.php">
                 SupplierID: <input type="text" name="SupplierID"><br>
                 Brand: <input type="text" name="Brand"><br>
@@ -77,8 +77,8 @@
                     {
                         echo "<tr><td>".$row["SupplierID"]."</td><td>".
                         $row["Brand"]."</td><td>".$row["SupplierName"]."</td><td>".
-                        $row["ContactPerson"]."</td><td>".$row["ContactPhoneNumber"]."</td><td>".
-                        $row["PAddress"]."</td><td><form method='post' action='delete_supplier.php'><input type='hidden' name='delete_id' value='"
+                        $row["Contact"]."</td><td>".$row["ContactPhoneNumber"]."</td><td>".
+                        $row["PAddress"]."</td><td><form method='post' action='./suppliers/delete_supplier.php'><input type='hidden' name='delete_id' value='"
                         .$row["SupplierID"]."'><input type='submit' value='删除'></form></td></tr>";
                     }
                     echo "</table>";

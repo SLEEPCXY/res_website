@@ -52,7 +52,7 @@
         <div id="content" class="clearfix">
         <div id = 'Add'>
             <!-- 添加表单 -->
-            <h3>Add Inventory</h3>
+            <h3>增加库存</h3>
             <form method="post" action="./inventory/add.php">
                 <!-- User ID: <input type="text" name="UserID"><br> -->
                 Dish ID: <input type="text" name="DishID"><br>
@@ -67,7 +67,7 @@
 
         <div id = 'Change'>
             <!-- 修改表单 -->
-            <h3>Modify Inventory</h3>
+            <h3>修改库存</h3>
             <form method="post" action="./inventory/modify.php">
                 Dish ID: <input type="text" name="modify_id"><br>
                 User ID: <input type="text" name="modify_user_id"><br>
@@ -92,16 +92,16 @@
             }
 
             // 获取数据库中的数据
-            $sql = "SELECT UserID, DishID, CurrentStock, PurchasePrice, SellingPrice FROM dishinventory";
+            $sql = "SELECT InventoryID, DishID, CurrentStock, PurchasePrice, SellingPrice FROM dishinventory";
             $result = $conn->query($sql);
 
             // 输出表格及删除按钮
             if ($result->num_rows > 0) {
                 echo "<table>";
-                echo "<tr><th>User ID</th><th>Dish ID</th><th>Current Stock</th><th>Purchase Price</th><th>Selling Price</th><th>Action</th></tr>";
+                echo "<tr><th>Inventory ID</th><th>Dish ID</th><th>Current Stock</th><th>Purchase Price</th><th>Selling Price</th><th>Action</th></tr>";
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td>" . $row['UserID'] . "</td>";
+                    echo "<td>" . $row['InventoryID'] . "</td>";
                     echo "<td>" . $row['DishID'] . "</td>";
                     echo "<td>" . $row['CurrentStock'] . "</td>";
                     echo "<td>" . $row['PurchasePrice'] . "</td>";

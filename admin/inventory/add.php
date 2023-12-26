@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $SellingPrice = $_POST['SellingPrice'];
 
     // 构建 SQL 插入语句
-    $sql = "INSERT INTO dishinventory (UserID, DishID, CurrentStock, PurchasePrice, SellingPrice)
+    $sql = "INSERT INTO dishinventory (InventoryID, DishID, CurrentStock, PurchasePrice, SellingPrice)
     VALUES ('$InventoryID', '$DishID', '$CurrentStock', '$PurchasePrice', '$SellingPrice');";
 
     // 执行插入操作

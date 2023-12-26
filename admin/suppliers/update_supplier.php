@@ -16,7 +16,7 @@ $ContactPhoneNumber = $_POST['ContactPhoneNumber'];
 $Address = $_POST['Address'];
 
 // 更新记录的 SQL 语句
-$sql = "UPDATE suppliers SET Brand='$Brand', SupplierName='$SupplierName', ContactPerson='$Contact', ContactPhoneNumber='$ContactPhoneNumber', PAddress='$Address' WHERE SupplierID='$SupplierID'";
+$sql = "UPDATE suppliers SET Brand='$Brand', SupplierName='$SupplierName', Contact='$Contact', ContactPhoneNumber='$ContactPhoneNumber', PAddress='$Address' WHERE SupplierID='$SupplierID'";
 
 // 执行 SQL
 if ($conn->query($sql) === TRUE) {

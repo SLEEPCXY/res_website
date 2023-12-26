@@ -33,7 +33,7 @@
             <h2>添加用户</h2>
             <form action="./users/add_user.php" method="post">
                 UserName: <input type="text" name="UserName"><br>
-                Password: <input type="password" name="Password"><br>
+                Password: <input type="text" name="Password"><br>
                 Address: <input type="text" name="Address"><br>
                 PhoneNumber: <input type="text" name="PhoneNumber"><br>
                 <input type="submit" value="添加">
@@ -46,7 +46,7 @@
             <h2>修改用户</h2>
             <form action="./users/update_user.php" method="post">
                 UserName: <input type="text" name="UserName"><br>
-                Password: <input type="password" name="Password"><br>
+                Password: <input type="text" name="Password"><br>
                 Address: <input type="text" name="Address"><br>
                 PhoneNumber: <input type="text" name="PhoneNumber"><br>
                 <input type="submit" value="修改">
